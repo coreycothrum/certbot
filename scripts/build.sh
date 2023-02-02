@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-docker build -t coreycothrum/certbot .
+set -eu
+
+docker build -t coreycothrum/certbot:$(git describe --always --tags --dirty) .
